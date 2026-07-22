@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> vivo </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+                background-color: black;
+                color: WHITE;
+            }
+
+            body p{
+                 font-weight: bold;
+                 color: rgb(197, 197, 197);
+            }
+
+            body h2 {
+                font-weight: bold;
+                color: white;
+            }
+
+            body h3 {
+                font-weight: bold;
+                color: white;
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 6%;
+                background-color: black;
+                border-bottom: 3px solid #0184ff;
+                height: 120px;
+                border-bottom-left-radius: 50px;
+                border-bottom-right-radius: 50px;
+            }
+
+            header h1 {
+                color: #22aeff;
+                font-size: 45px;
+                word-spacing: 10px;
+            }
+
+            .navbar {
+                display: flex;
+                align-items: center;
+                padding: 10px 8%;
+                background-color: black;
+                text-align: right;
+                gap: 40px;
+                font-weight: bold;
+            }
+
+            header a{
+                text-decoration: none;
+                color: white;
+                font-size: 22px;
+
+            }
+
+            a:hover {
+                transform: scale(1.05);
+                transition: 0.3s;
+                color: #01afff;
+                
+            }
+
+            header h1:hover {
+                color: #0184ff;
+            }
+
+            footer {
+                background-color: rgb(0, 0, 0);
+                margin-top: 80px;
+                padding: 30px;
+                text-align: center;
+                border-top: 2px solid #0184ff;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px;
+            }
+
+            .footer {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                margin: auto;
+                text-align: center;
+                gap: 20%;
+                line-height: 40px;
+                padding: 10px;
+                
+            }
+
+            .fixed {
+                background: linear-gradient(-39deg, #80f9b4 , #30e1d8 , #387eff 70%);
+                position: fixed; 
+                bottom: 50px; 
+                right: 50px;
+                text-align: center;
+                border-radius: 20px;
+                padding: 15px;
+                width: 180px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .fixed:hover {
+                border: 2PX solid #19A9FC;
+                border-radius: 40PX;
+                transform: translateY(-10px) scale(1.03) rotateX(6deg) rotateY(-4deg);
+                background-color: #328bff;
+                box-shadow: 0 12px 18px rgba(0, 0, 0, 0.75), 0 6px 14px rgb(39, 214, 253);
+            }
+
+            .container {
+                padding: 40px;
+            }
+
+            .container .mainh1 {
+                font-size: 70px;
+                text-align: center;
+                margin: 50px;
+                color: rgb(185, 185, 185);
+            }
+
+            .container .mainh {
+                font-size: 50px;
+                background: linear-gradient(-39deg, #9ffac7 , #64e9e3 , #0e60f9 80%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .container h3 {
+                font-size: 28px;
+                color: rgb(175, 175, 175);
+            }
+
+            .hero {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                margin: auto;
+                gap: 30px;
+                border-bottom: 3px solid #0184ff;
+            }
+
+            .hero h1 {
+                font-size: 80px;  
+                margin-top: 80px; 
+                background: linear-gradient(-39deg, #9ffac7 , #64e9e3 , #0e60f9 80%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;             
+            }
+
+            .hero1{
+                width: 50%;
+                padding: 30px;
+                padding-top: 100px;
+                text-align: center;
+            }
+
+            .hero2{
+                width: 50%;
+            }
+
+            .hero img {
+                width: 80%;
+            }
+
+            .con1:hover, .design:hover, .con3:hover, .con4:hover, .con5:hover {
+                border: 1PX solid #19A9FC;
+                border-radius: 40PX;
+                transform: translateY(-17px) scale(1.03) rotateX(6deg) rotateY(-4deg);
+                box-shadow: 0 12px 18px rgba(0, 0, 0, 0.75), 0 6px 14px rgba(39, 214, 253, 0.664);
+            }
+
+            .con1 {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                width: 90%;
+                margin: auto;
+                border: 2px solid #0184ff;
+                border-radius: 40px;
+                padding: 30px;
+                text-align: center;
+                gap: 40px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .con11 {
+                width: 50%;
+            }
+
+            .con11 video {
+                width: 100%;
+            }
+
+            .con12 {
+                width: 50%;
+                padding-top: 10px;
+                padding: 30px;
+            }
+
+            .con2 {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                width: 90%;
+                margin: auto;
+                border: 2px solid #0184ff;
+                border-radius: 40px;
+                padding: 30px;
+                text-align: center;
+                gap: 40px;
+                margin-top: 30px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .con21 {
+                width: 50%;
+                padding: 30px;
+                padding-top: 50px;
+            }
+
+            .con21 video {
+                width: 100%;
+            }
+
+            .con22 {
+                width: 50%;
+                padding: 30px;
+            }
+
+            .con22 video {
+                width: 100%;
+            }
+
+            .con3{
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                width: 90%;
+                margin: auto;
+                border: 2px solid #0184ff;
+                border-radius: 40px;
+                padding: 30px;
+                text-align: center;
+                gap: 40px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .con31 {
+                width: 50%;
+                padding: 45px;
+                padding-top: 70px;
+            }
+
+            .con32 {
+                width: 50%;
+            }
+
+            .con32 video {
+                width: 100%;
+            }
+
+            .con4{
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                width: 90%;
+                margin: auto;
+                border: 2px solid #0184ff;
+                border-radius: 40px;
+                padding: 30px;
+                text-align: center;
+                gap: 40px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .con41 {
+                width: 50%;
+
+            }
+
+            .con42 {
+                width: 50%;
+                padding: 15px;
+            }
+
+            .con41 video {
+                width: 110%;
+            }
+
+            .con5{
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                width: 60%;
+                margin: auto;
+                border: 2px solid #0184ff;
+                border-radius: 40px;
+                padding: 30px;
+                text-align: center;
+                gap: 40px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .con51{
+                width: 50%;
+                padding: 30px;
+                padding-top: 80px;
+            }
+
+            .con52 {
+                width: 50%;
+            }
+
+            .con52 img {
+                width: 80%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="home.html" target="_blank"> <H1> TECH POINT </H1> </a>
+            <div class="navbar">
+                <a href="SAMSUNG.html" target="_blank"> SAMSUNG </a>
+                <a href="VIVO.html" target="_blank"> VIVO </a>
+                <a href="xiaomi.html" target="_blank"> XIAOMI </a>
+                <a href="BUYNOW.html" target="_blank" class="nav"><i class="fa-solid fa-cart-shopping"></i> BUY NOW </a>
+            </div>
+        </header>
+
+        <a href="BUYNOW.html"> <DIV class="box fixed"> <H2> Buy Now </H2> </DIV> </a>
+        
+        <div class="container">
+            <div class="hero">
+                <div class="hero1">
+                    <h1> Vivo x200 Pro </h1>
+                    <h3> 
+                        ZEISS Image. Go Far.
+                    </h3>
+                    
+                </div>
+                <div class="hero2">
+                    <img src="MEDIA/vivointro.png">
+                </div>
+            </div>
+
+            <h1 class="mainh1"> Processor </h1>
+            <div class="con1">
+                <div class="con11">
+                    <video src="MEDIA/demensity.mp4" muted autoplay loop> </video>
+                </div>
+                <DIV class="con12">
+                    <h1 class="mainh"> Built for speed, engineered for efficiency </h1>
+                    <br>
+                    <h3> 
+                        Powered by 3 nm Dimensity 9400 with next-gen CPU architecture, vivo X200 Pro 
+                        delivers powerful performance with efficient cooling, ensuring smooth operation
+                        without overheating or battery drain.
+                    </h3>
+                </DIV>
+            </div>
+
+            <h1 class="mainh1"> Design </h1>
+            <div class="con2">
+                <div class="con21">
+                    <h1 class="mainh"> Built for speed, engineered for efficiency </h1>
+                    <br>
+                    <h3>    
+                        Sleek and bold. vivo X200 Pro's Equal-Depth Quad Curved Display 
+                        offers an immersive experience <br> with a uniform curve, reinforced 
+                        by Armor Glass for enhanced durability
+                    </h3>
+                </div>
+                <div class="con22">
+                    <video src="MEDIA/vivodesign3.webm" muted autoplay loop></video>
+                </div>
+            </div>
+
+            <h1 class="mainh1"> Camera </h1>
+            <div class="con3">
+                <DIV class="con31">
+                    <h1 class="mainh"> Capture with Confidence </h1>
+                    <br>
+                    <h3> 
+                        The vivo ZEISS Co-engineered Imaging System brings out the finest 
+                        details, turning every moment into a masterpiece.
+                    </h3>
+                </DIV>
+                <div class="con32">
+                    <video src="MEDIA/vivocamera.mp4" muted autoplay loop> </video>
+                </div>
+            </div>
+
+            <h1 class="mainh1"> Battery </h1>
+            <div class="con4">
+                <div class="con41">
+                    <video src="MEDIA/vivobattery.mp4" muted autoplay loop> </video>
+                </div>
+                <DIV class="con42">
+                    <h1 class="mainh"> long lasting 6000mah Battery </h1>
+                    <br>
+                    <h3> 
+                        vivo X200 Pro's 6000 mAh battery, powered by 3rd-Gen Silicon Anode and 
+                        Semi-Solid Battery Technology, ensures enduring performance even in extreme 
+                        cold down to -20°C. Plus, with 90W FlashCharge, you're powered up and 
+                        ready to go in no time.
+                    </h3>
+                </DIV>
+            </div>
+
+            <h1 class="mainh1"> durability </h1>
+            <div class="con5">
+                <DIV class="con51">
+                    <h1 class="mainh"> Engineered for Durability </h1>
+                    <br>
+                    <h3> 
+                        With IP68 & IP69 water and dust resistance, vivo X200 Pro's stands strong 
+                        against the elements, delivering peace of mind in any weather.
+                    </h3>
+                </DIV>
+                <div class="con52">
+                    <img src="MEDIA/vivowater.jpg">
+                </div>
+            </div>
+        </div>
+
+        <FOOTER>
+
+            <DIV class="footer">
+                <DIV>
+                    <H2> LET US HELP YOU </H2>
+                    <P> YOUR ACCOUNT </P>
+                    <P> YOUR ORDER </P>
+                    <P> YOUR RETURNS </P>
+                    <P> E-WARRENTY </P>
+                </DIV>
+                <DIV>
+                    <H2> TECH POINT </H2>
+                    <P> ABOUT US </P>
+                    <P> CAREERS</P>
+                    <P> CONTACT US </P>
+                    <P> COPYRIGHT </P>
+                </DIV>
+                <DIV>
+                    <H2> CUSTOMER SERVICES </H2>
+                    <P> HELP CENTER </P>
+                    <P> PRIVACY POLICY </P>
+                    <P> INSTALLMENTS </P>
+                    <P> E-WARRENTY </P>
+                </DIV>
+            </DIV>
+
+            <DIV class="foot">
+                <P>© CREATED BY Muhammad Omer. WEB-DEVELOPMENT BATCH 2025 </P>
+            </DIV>
+            
+        </FOOTER>
+    </body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Xiaomi </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+                background-color: black;
+                color: WHITE;
+                
+            }
+
+            body p{
+                 font-weight: bold;
+                 color: rgb(197, 197, 197);
+            }
+
+            body h2 {
+                font-weight: bold;
+                color: white;
+            }
+
+            body h3 {
+                font-weight: bold;
+                color: white;
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 6%;
+                background-color: black;
+                border-bottom: 2px solid #2d92ff;
+                height: 120px;
+                border-bottom-left-radius: 50px;
+                border-bottom-right-radius: 50px;
+            }
+
+            header h1 {
+                color: #22aeff;
+                font-size: 45px;
+                word-spacing: 10px;
+            }
+
+            .navbar {
+                display: flex;
+                align-items: center;
+                padding: 10px 8%;
+                background-color: black;
+                text-align: right;
+                gap: 40px;
+            }
+
+            header a{
+                text-decoration: none;
+                color: white;
+                font-size: 22px;
+                font-weight: bold;
+
+            }
+
+            a:hover {
+                transform: scale(1.05);
+                transition: 0.3s;
+                color: #01afff;
+                
+            }
+
+            header h1:hover {
+                color: #0184ff;
+            }
+
+            footer {
+                background-color: rgb(0, 0, 0);
+                margin-top: 80px;
+                padding: 30px;
+                text-align: center;
+                border-top: 2px solid #2d92ff;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px;
+            }
+
+            .footer {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                margin: auto;
+                text-align: center;
+                gap: 20%;
+                line-height: 40px;
+                padding: 10px;
+                
+            }
+
+            .fixed {
+                background: linear-gradient(-39deg, #80f9b4 , #30e1d8 , #387eff 70%);
+                position: fixed; 
+                bottom: 50px; 
+                right: 50px;
+                text-align: center;
+                border-radius: 20px;
+                padding: 15px;
+                width: 180px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .fixed:hover {
+                border: 2PX solid #19A9FC;
+                border-radius: 40PX;
+                transform: translateY(-10px) scale(1.03) rotateX(6deg) rotateY(-4deg);
+                background-color: #328bff;
+                box-shadow: 0 12px 18px rgba(0, 0, 0, 0.75), 0 6px 14px rgb(39, 214, 253);
+            }
+
+            .con1:hover, .con2:hover, .con3:hover, .con4:hover, .con5:hover, .c3:hover {
+                border: 1PX solid #19A9FC;
+                border-radius: 40PX;
+                transform: translateY(-17px) scale(1.03) rotateX(6deg) rotateY(-4deg);
+                box-shadow: 0 12px 18px rgba(0, 0, 0, 0.75), 0 6px 14px rgba(39, 214, 253, 0.664);
+            }
+
+            .container {
+                padding: 40px;
+            }
+
+            .container .mainh1 {
+                font-size: 70px;
+                text-align: center;
+                margin: 50px;
+                color: rgb(185, 185, 185);
+            }
+
+            .container .mainh {
+                font-size: 50px;
+                background: linear-gradient(-39deg, #ffd95c , #df9203 , #c70000 80%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .container h3 {
+                font-size: 28px;
+                color: rgb(175, 175, 175);
+            }
+
+            .hero {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                margin: auto;
+                gap: 30px;
+                border-bottom: 4px solid #0184ff;
+            }
+
+            .hero h1 {
+                font-size: 80px;  
+                margin-top: 80px; 
+                background: linear-gradient(-39deg, #ffd95c , #df9203 , #c70000 80%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;             
+            }
+
+            .hero1{
+                width: 50%;
+                padding: 30px;
+                padding-top: 70px;
+                text-align: center;
+            }
+
+            .hero2{
+                width: 50%;
+            }
+
+            .hero img {
+                width: 80%;
+            }
+
+            .con1{
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                width: 90%;
+                margin: auto;
+                border: 2px solid #0184ff;
+                border-radius: 40px;
+                padding: 50px;
+                text-align: center;
+                gap: 40px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .con11{
+                width: 50%;
+            }
+
+            .con12{
+                width: 50%;
+                padding: 40px;
+                padding-top: 50px;
+            }
+
+            .con11 img {
+                width: 100%;
+            }
+
+            .con2{
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                width: 90%;
+                margin: auto;
+                border: 2px solid #0184ff;
+                border-radius: 40px;
+                padding: 80px;
+                text-align: center;
+                gap: 40px;
+                transition: 0.3s ease-in-out;
+                
+            }
+
+            .con21{
+                width: 50%;
+                padding: 40px;
+                padding-top: 50px;
+            }
+
+            .con22{
+                width: 50%;
+            }
+
+            .con22 img {
+                width: 100%;
+            }
+
+            .con3{
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                width: 90%;
+                margin: auto;
+                border: 2px solid #0184ff;
+                border-radius: 40px;
+                padding: 20px;
+                text-align: center;
+                gap: 40px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .con31{
+                width: 50%;
+            }
+
+            .con32{
+                width: 50%;
+                padding: 10px;
+                padding-top: 50px;
+            }
+
+            .con31 img {
+                width: 100%;
+            }
+            
+            .con4{
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 30px;
+                border: 2px solid #0184ff;
+                border-radius: 30px;
+                width: 90%;
+                margin: auto;
+                margin-top: 30px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .con41 {
+                width: 50%;
+                padding: 50px;  
+                text-align: center;
+            }
+
+            .con42{
+                width: 50%;
+                margin-top: 65px;
+            }
+
+            .con42 video  {
+                width: 100%;
+            }
+
+            .con5 {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                width: 90%;
+                margin: auto;
+                border: 2px solid #0184ff;
+                border-radius: 40px;
+                padding: 20px;
+                text-align: center;
+                gap: 40px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .con51{
+                width: 50%;
+                padding: 20px;
+                
+            }
+
+            .con52 {
+                width: 50%;
+                transition: 0.3s ease-in-out;
+            }
+
+            .con52 video {
+                width: 100%;
+            }
+
+            .c3{
+                width: 66%;
+                border: 2px solid #0184ff;
+                border-radius: 30px;
+                padding: 20px;
+                margin: auto;
+                margin-top: 50px;
+                transition: 0.3s ease-in-out;
+
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="home.html" target="_blank"> <H1> TECH POINT </H1> </a>
+            <div class="navbar">
+                <a href="SAMSUNG.html" target="_blank"> SAMSUNG </a>
+                <a href="VIVO.html" target="_blank"> VIVO </a>
+                <a href="xiaomi.html" target="_blank"> XIAOMI </a>
+                <a href="BUYNOW.html" target="_blank" class="nav"><i class="fa-solid fa-cart-shopping"></i> BUY NOW </a>
+            </div>
+        </header>
+
+        <a href="BUYNOW.html"> <DIV class="box fixed"> <H2> Buy Now </H2> </DIV> </a>
+
+        <div class="container">
+            <div class="hero">
+                <div class="hero1">
+                    <h1> Xiaomi 15 Ultra </h1>
+                    <h3> Pinnacle Photography </h3>
+                </div>
+                <div class="hero2">
+                    <img src="MEDIA/xiaomiintro.png">
+                </div>
+            </div>
+
+            <h1 class="mainh1"> Design </h1>
+            <div class="con1">
+                <div class="con11">
+                    <img src="MEDIA/xiaomidesign.png">
+                </div>
+                <DIV class="con12">
+                    <h1 class="mainh"> Camera-inspired design </h1>
+                    <br>
+                    <h3> 
+                        Continuing with a premium camera-inspired design and 
+                        a retro cinematic aesthetic. The all-new portless design 
+                        on the top frame, as well as the wraparound quad-curved 
+                        frame further improve its reliability and feel in your 
+                        hand. Honouring the classics with innovation.
+                    </h3>
+                </DIV>
+            </div>
+
+            <h1 class="mainh1"> Battery </h1>
+            <div class="con2">
+                <DIV class="con21">
+                    <h1 class="mainh"> Ultra-long battery life </h1>
+                    <br>
+                    <h3> 
+                        Maintains a slim design while utilizing a massive 
+                        5410mAh (typ) Xiaomi Surge Battery, offering a 
+                        magnificent battery life experience
+                    </h3>
+                </DIV>
+                <div class="con22">
+                    <img src="MEDIA/xiaomibattery.jpg">
+                </div>
+            </div>
+
+            <h1 class="mainh1"> Processor </h1>
+            <div class="con3">
+                <div class="con31">
+                    <img src="MEDIA/snap8elite.png">
+                </div>
+                <DIV class="con32">
+                    <h1 class="mainh"> Impressive performance with energy efficiency </h1>
+                    <br>
+                    <h3> 
+                        Xiaomi 15 Ultra is powered by the industry-leading 
+                        Snapdragon 8 Elite Mobile Platform with a 3nm 
+                        manufacturing process and Oryon CPU, which brings a 
+                        transformed performance while balancing power 
+                        consumption and daily battery life.
+                    </h3>
+                </DIV>
+            </div>
+
+            <h1 class="mainh1"> Camera </h1>
+            <div class="con4">
+                <div class="con41">  
+                    <h1 class="mainh"> Next-gen Leica quad camera system </h1>
+                    <br>
+                    <h3>  
+                        Surpassing spatial constraints, effortless composition <br>
+                        is at your fingertips. Thanks to the outstanding 
+                        14mm - 200mm optical-level zoom, Xiaomi 15 Ultra offers 
+                        an even more powerful all focal lengths photography 
+                        experience.
+                    </h3>
+                </div>
+                <div class="con42">
+                    <video src="MEDIA/xiaomicamera.mp4" muted autoplay loop> </video>
+                </div>
+            </div>
+
+            <h1 class="mainh1"> Structure </h1>
+            <div class="con5">
+                <div class="con51">
+                    <h1 class="mainh"> Xiaomi Guardian Structure </h1>
+                    <br>
+                    <h3>  
+                        Xiaomi 15 Ultra features the next-generation Xiaomi Guardian 
+                        Structure, crafted with exquisite detail, like the new 
+                        form high-strength aluminum frame, Corning® Gorilla® 
+                        Glass 7i protected camera deco, and durable back, giving 
+                        users a more reassuring experience.
+                    </h3>
+                </div>
+                <div class="con52">  
+                    <video src="MEDIA/xiaomistructure.mp4" muted autoplay loop></video>
+                </div>
+            </div>
+
+            <div class="c3">
+                <video src="MEDIA/xiaomilongdesign.mp4" muted autoplay loop></video>
+            </div>
+        </div>    
+
+        <FOOTER>
+
+            <DIV class="footer">
+                <DIV>
+                    <H2> LET US HELP YOU </H2>
+                    <P> YOUR ACCOUNT </P>
+                    <P> YOUR ORDER </P>
+                    <P> YOUR RETURNS </P>
+                    <P> E-WARRENTY </P>
+                </DIV>
+                <DIV>
+                    <H2> TECH POINT </H2>
+                    <P> ABOUT US </P>
+                    <P> CAREERS</P>
+                    <P> CONTACT US </P>
+                    <P> COPYRIGHT </P>
+                </DIV>
+                <DIV>
+                    <H2> CUSTOMER SERVICES </H2>
+                    <P> HELP CENTER </P>
+                    <P> PRIVACY POLICY </P>
+                    <P> INSTALLMENTS </P>
+                    <P> E-WARRENTY </P>
+                </DIV>
+            </DIV>
+
+            <DIV class="foot">
+                <P>© CREATED BY Muhammad Omer. WEB-DEVELOPMENT BATCH 2025 </P>
+            </DIV>
+        </FOOTER>
+    </body>
+</html>

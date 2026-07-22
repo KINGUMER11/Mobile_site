@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SAMSUNG</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+                background-color: black;
+                color: WHITE;
+                
+            }
+
+            body p{
+                 font-weight: bold;
+                 color: rgb(197, 197, 197);
+            }
+
+            body h2 {
+                font-weight: bold;
+                color: white;
+            }
+
+            body h3 {
+                font-weight: bold;
+                color: white;
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 6%;
+                background-color: black;
+                border-bottom: 2px solid #2d92ff;
+                height: 120px;
+                border-bottom-left-radius: 50px;
+                border-bottom-right-radius: 50px;
+            }
+
+            header h1 {
+                color: #22aeff;
+                font-size: 45px;
+                word-spacing: 10px;
+            }
+
+            .navbar {
+                display: flex;
+                align-items: center;
+                padding: 10px 8%;
+                background-color: black;
+                text-align: right;
+                gap: 40px;
+                font-weight: bold;
+            }
+
+            header a{
+                text-decoration: none;
+                color: white;
+                font-size: 22px;
+
+            }
+
+            a:hover {
+                transform: scale(1.05);
+                transition: 0.3s;
+                color: #01afff;
+                
+            }
+
+            header h1:hover {
+                color: #0184ff;
+            }
+
+            footer {
+                background-color: rgb(0, 0, 0);
+                margin-top: 80px;
+                padding: 30px;
+                text-align: center;
+                border-top: 2px solid #2d92ff;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px;
+            }
+
+            .footer {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                margin: auto;
+                text-align: center;
+                gap: 20%;
+                line-height: 40px;
+                padding: 10px;
+                
+            }
+
+            .fixed {
+                background: linear-gradient(-39deg, #80f9b4 , #30e1d8 , #387eff 70%);
+                position: fixed; 
+                bottom: 50px; 
+                right: 50px;
+                text-align: center;
+                border-radius: 20px;
+                padding: 15px;
+                width: 180px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .fixed:hover {
+                border: 2PX solid #19A9FC;
+                border-radius: 40PX;
+                transform: translateY(-10px) scale(1.03) rotateX(6deg) rotateY(-4deg);
+                background-color: #328bff;
+                box-shadow: 0 12px 18px rgba(0, 0, 0, 0.75), 0 6px 14px rgb(39, 214, 253);
+            }
+
+            .container {
+                padding: 40px;
+            }
+
+            .container .mainh1 {
+                font-size: 70px;
+                text-align: center;
+                margin: 50px;
+                color: rgb(185, 185, 185);
+            }
+
+            .container .mainh {
+                font-size: 50px;
+                background: linear-gradient(-39deg, #9ffac7 , #64e9e3 , #0e60f9 80%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .container h3 {
+                font-size: 28px;
+                color: rgb(175, 175, 175);
+            }
+
+            .hero {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                margin: auto;
+                gap: 30px;
+                
+            }
+
+            .hero h1 {
+                font-size: 80px;  
+                margin-top: 80px; 
+                background: linear-gradient(-39deg, #9ffac7 , #64e9e3 , #0e60f9 80%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;             
+            }
+
+            .hero1{
+                text-align: center;
+                width: 50%;
+                padding-top: 23px;
+            }
+
+            .hero2{
+                width: 50%;
+                padding: 20px;
+            }
+
+            .hero2 img {
+                width: 130%;
+            }
+
+            .con1:hover, .con2:hover, .con3:hover, .con4:hover, .con5:hover, .con6:hover {
+                border: 1PX solid #19A9FC;
+                border-radius: 40PX;
+                transform: translateY(-17px) scale(1.03) rotateX(6deg) rotateY(-4deg);
+                box-shadow: 0 12px 18px rgba(0, 0, 0, 0.75), 0 6px 14px rgba(39, 214, 253, 0.664);
+            }
+
+            .con1 {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                width: 90%;
+                margin: auto;
+                border: 2px solid #328bff;
+                border-radius: 40px;
+                padding: 30px;
+                text-align: center;
+                gap: 40px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .con11 {
+                width: 50%;
+
+            }
+
+            .con11 img {
+                width: 70%;
+            }
+
+            .con12 {
+                width: 47%;
+                padding: 20px;
+                margin-top: 50px;
+            }
+
+            .con2 {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                width: 90%;
+                margin: auto;
+                border: 2px solid #328bff;
+                border-radius: 40px;
+                padding: 30px;
+                text-align: center;
+                gap: 40px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .con21 {
+                width: 50%;
+                padding: 20px;
+                margin-top: 110px;
+            }
+
+            .con22 {
+                width: 50%;
+            }
+
+            .con22 img {
+                width: 100%;
+            }
+
+            .con3 {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                width: 90%;
+                margin: auto;
+                border: 2px solid #328bff;
+                border-radius: 40px;
+                padding: 30px;
+                text-align: center;
+                gap: 40px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .con31 {
+                width: 50%;
+            }
+
+            .con31 video {
+                width: 70%;
+            }
+
+            .con32 {
+                width: 50%;
+                padding: 20px;
+                padding-top: 70px;
+            }
+
+            .con4 {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                width: 90%;
+                margin: auto;
+                border: 2px solid #328bff;
+                border-radius: 40px;
+                text-align: center;
+                gap: 40px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .con41 {
+                width: 50%;
+                padding: 30px;
+                padding-top: 80px;
+            }
+
+            .con42 {
+                width: 50%;
+                
+            }
+
+            .con42 video {
+                width: 80%;
+            }
+
+            .con5 {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                width: 90%;
+                margin: auto;
+                border: 2px solid #328bff;
+                border-radius: 40px;
+                padding: 30px;
+                text-align: center;
+                gap: 40px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .con51 {
+                width: 50%;
+                padding: 20px;
+            }
+
+            .con52 {
+                width: 50%;
+                padding: 20px;
+                padding-top: 43px;
+            }
+
+            .con6 {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                width: 90%;
+                margin: auto;
+                border: 2px solid #328bff;
+                border-radius: 40px;
+                padding: 30px;
+                text-align: center;
+                gap: 40px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .con61 {
+                width: 50%;
+                padding: 20px;
+                padding-top: 90px;
+            }
+
+            .con62 {
+                width: 50%;
+                padding: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="home.html" target="_blank"> <H1> TECH POINT </H1> </a>
+            <div class="navbar">
+                <a href="SAMSUNG.html" target="_blank"> SAMSUNG </a>
+                <a href="VIVO.html" target="_blank"> VIVO </a>
+                <a href="xiaomi.html" target="_blank"> XIAOMI </a>
+                <a href="BUYNOW.html" target="_blank" class="nav"><i class="fa-solid fa-cart-shopping"></i> BUY NOW </a>
+            </div>
+        </header>
+
+        <a href="BUYNOW.html"> <DIV class="box fixed"> <H2> Buy Now </H2> </DIV> </a>
+
+        <div class="container">
+            <div class="hero">
+                <div class="hero2">
+                    <img src="MEDIA/s25intro.png" >
+                </div>
+                <div class="hero1">
+                    <h1> Samsung Galaxy <br> s25 Ultra </h1>
+                    <br> <br>
+                    <img src="MEDIA/galaxyai.jpg">    
+                </div>
+            </div>
+
+            <h1 class="mainh1"> Design </h1>
+            <div class="con1">
+                <div class="con11">
+                    <img src="MEDIA/s25design.png">
+                </div>
+                <DIV class="con12">
+                    <h1 class="mainh"> Redefining Premium Design </h1>
+                    <br> 
+                    <h3> 
+                        Galaxy S25 Ultra's rounded design expresses a unified identity for the Galaxy 
+                        S series. With its sleek and strong titanium frame and a built-in S Pen, it's an 
+                        ultra-modern, vision of bold design. 
+                    </h3>
+                </DIV>
+            </div>
+
+            <h1 class="mainh1"> Software </h1>
+            <div class="con2">
+                <DIV class="con21">
+                    <h1 class="mainh"> One UI 7 </h1>
+                    <br>
+                    <h3> 
+                        One UI 7 is Samsung's latest Android software upgrade, focusing on enhanced Galaxy
+                        AI features, redesigned user interface elements, and smarter navigation
+                    </h3>
+                </DIV>
+                <div class="con22">
+                    <img src="MEDIA/oneui7.png">
+                </div>
+            </div>
+
+            <h1 class="mainh1"> Camera </h1>
+            <div class="con3">
+                <div class="con31">
+                    <video src="MEDIA/samcamera.mp4" muted autoplay loop>  </video>
+                </div>
+                <DIV class="con32">
+                    <h1 class="mainh"> The most advanced AI ProVisual Engine </h1>
+                    <br>
+                    <h3> 
+                        Our next-gen ProVisual Engine is now boosted by our powerful processor—allowing you to capture, view and edit for our best camera and editing experience yet.
+                    </h3>
+                </DIV>
+            </div>
+
+            <h1 class="mainh1"> Processor </h1>
+            <div class="con4">
+                <DIV class="con41">
+                    <h1 class="mainh"> The most powerful processor, customized <br> for Galaxy </h1>
+                    <br>
+                    <h3> 
+                        Our next-gen ProVisual Engine is now boosted by our powerful processor—allowing you to capture, view and edit for our best camera and editing experience yet.
+                    </h3>
+                </DIV>
+                <div class="con42">
+                    <video src="MEDIA/s25processor.mp4" muted autoplay loop>  </video>
+                </div>
+            </div>
+
+            <h1 class="mainh1"> Security </h1>
+            <div class="con5">
+                <div class="con51">
+                    <img src="MEDIA/sequrity.jpg">
+                </div>
+                <DIV class="con52">
+                    <h1 class="mainh"> Personal data stays personal </h1>
+                    <br>
+                    <h3> 
+                        The Personal Data Engine combines and processes your primary data and provides tailored suggestions. It encrypts this data and saves it on your device with Knox Vault, making it inaccessible to anyone else.
+                    </h3>
+                </DIV>
+            </div>
+
+            <h1 class="mainh1"> Storage </h1>
+            <div class="con6">
+                <DIV class="con61">
+                    <h1 class="mainh"> Up to 1 TB storage </h1>
+                    <br>
+                    <h3> 
+                        Store it all with 12 GB of memory and up to 256 GB, 512 GB or 1 TB of storage.
+                    </h3>
+                </DIV>
+                <div class="con62">
+                    <img src="MEDIA/samstorage.jpg">
+                </div>
+            </div>
+        </div>    
+        <FOOTER>
+        
+            <DIV class="footer">
+                <DIV>
+                    <H2> LET US HELP YOU </H2>
+                    <P> YOUR ACCOUNT </P>
+                    <P> YOUR ORDER </P>
+                    <P> YOUR RETURNS </P>
+                    <P> E-WARRENTY </P>
+                </DIV>
+                <DIV>
+                    <H2> TECH POINT </H2>
+                    <P> ABOUT US </P>
+                    <P> CAREERS</P>
+                    <P> CONTACT US </P>
+                    <P> COPYRIGHT </P>
+                </DIV>
+                <DIV>
+                    <H2> CUSTOMER SERVICES </H2>
+                    <P> HELP CENTER </P>
+                    <P> PRIVACY POLICY </P>
+                    <P> INSTALLMENTS </P>
+                    <P> E-WARRENTY </P>
+                </DIV>
+            </DIV>
+
+            <DIV class="foot">
+                <P>© CREATED BY Muhammad Omer. WEB-DEVELOPMENT BATCH 2025 </P>
+            </DIV>
+        </FOOTER>
+    </body>
+</html>

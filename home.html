@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HOME</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+                background-color: black;
+                color: WHITE;
+                
+            }
+
+            body p{
+                 font-weight: bold;
+                 color: rgb(197, 197, 197);
+            }
+
+            body h2 {
+                font-weight: bold;
+                color: white;
+            }
+
+            body h3 {
+                font-weight: bold;
+                color: white;
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 6%;
+                background-color: black;
+                border-bottom: 2px solid #2d92ff;
+                height: 120px;
+                border-bottom-left-radius: 50px;
+                border-bottom-right-radius: 50px;
+            }
+
+            header h1 {
+                color: #22aeff;
+                font-size: 45px;
+                word-spacing: 10px;
+            }
+
+            .navbar {
+                display: flex;
+                align-items: center;
+                padding: 10px 8%;
+                background-color: black;
+                text-align: right;
+                gap: 40px;
+                font-weight: bold;
+            }
+
+            header a{
+                text-decoration: none;
+                color: white;
+                font-size: 22px;
+            }
+
+            a:hover {
+                transform: scale(1.05);
+                transition: 0.3s;
+                color: #01afff;
+                
+            }
+
+            header h1:hover {
+                color: #0184ff;
+            }
+
+            .hero {
+                width: 100%;
+               
+            }
+
+            .hero1 {
+                font-size: 90px;
+                text-align: center;
+                padding-top: 60px;
+                background: linear-gradient(-39deg, #9ffac7 , #64e9e3 , #0e60f9 70%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .hero2 {
+                font-size: 33px;
+                text-align: center;
+                margin-bottom: 60px;
+                align-items: start;
+                color: rgb(180, 180, 180);
+                
+            }
+
+            .product {
+                font-size: 25px;
+                background: linear-gradient(-39deg, #9ffac7 , #64e9e3 , #0e60f9 70%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                padding: 10px;
+                width: 100;
+                margin-top: 100px;
+                text-align: center;
+            }
+
+            .gallery {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                width: 100%;
+                margin-top: 25px;
+            }
+
+            .card {                
+                width: 92%;
+                margin: auto;
+                padding-bottom: 30px;
+                transition: 0.3s ease-in-out;
+                margin-top: 37px;
+            }
+
+            .card:hover {
+                border: 1PX solid #1970fc;
+                border-radius: 40PX;
+                transform: translateY(-17px) scale(1.03) rotateX(6deg) rotateY(-4deg);
+                background-color: #33b7fe2c;
+                box-shadow: 0 12px 18px rgba(0, 0, 0, 0.75), 0 6px 14px rgb(39, 214, 253);
+            }
+
+            .DETAIL:hover {
+                background-color: rgb(0, 174, 255);
+                text-decoration: none;
+            }
+
+            .card h2 {
+                text-align: center;
+            }
+
+            .card h3 {
+                margin-left: 100px;
+            }
+
+            .DETAIL {
+                border: 1px solid grey;
+                border-radius: 13px;
+                padding: 9px;
+                width: 50%;
+                margin: auto;
+                margin-top: 15px;
+                text-align: center;
+                transition: 0.3s ease-in-out;
+            }
+
+            .DETAIL a {
+                text-decoration: none;
+                color: white;
+                font-size: 17px;
+            }
+
+            footer {
+                background-color: black;
+                margin-top: 80px;
+                padding: 30px;
+                text-align: center;
+                border-top: 2px solid #2d92ff;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px;
+            }
+
+            .footer {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                margin: auto;
+                text-align: center;
+                gap: 10%;
+                line-height: 40px;
+                padding: 10px;
+                
+            }
+
+            .fixed {
+                background: linear-gradient(-39deg, #80f9b4 , #30e1d8 , #387eff 70%);
+                position: fixed; 
+                bottom: 50px; 
+                right: 50px;
+                text-align: center;
+                border-radius: 20px;
+                padding: 15px;
+                width: 180px;
+                transition: 0.3s ease-in-out;
+            }
+
+            .fixed:hover {
+                border: 2PX solid #19A9FC;
+                border-radius: 40PX;
+                transform: translateY(-10px) scale(1.03) rotateX(6deg) rotateY(-4deg);
+                background-color: #328bff;
+                box-shadow: 0 12px 18px rgba(0, 0, 0, 0.75), 0 6px 14px rgb(39, 214, 253);
+            }
+
+            .border1, .border2, .border3, .border4, .border5 {
+                border: 2px solid #0184ff;
+                height: 790px;
+            }
+
+            .border2, .border3, .border4 {
+                width: 25%;
+            }
+
+            .border1, .border5 {
+                width: 12.5%;
+                border-left: none;
+                border-right: none;
+            }
+
+            .border3 {
+                border-left: none;
+                border-right: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="home.html" target="_blank"> <H1> TECH POINT </H1> </a>
+            <div class="navbar">
+                <a href="SAMSUNG.html" target="_blank"> SAMSUNG </a>
+                <a href="VIVO.html" target="_blank"> VIVO </a>
+                <a href="xiaomi.html" target="_blank"> XIAOMI </a>
+                <a href="BUYNOW.html" target="_blank" class="nav"><i class="fa-solid fa-cart-shopping"></i> BUY NOW </a>
+            </div>
+        </header>
+
+        <a href="BUYNOW.html"> <DIV class="box fixed"> <H2> Buy Now </H2> </DIV> </a>
+
+        <div class="hero">
+            <h1 class="hero1"> Upgrade Your Experience </h1>
+            <H1 class="hero2"> Made For Your Everyday Flow </H1>
+        </div>
+
+        <div class="product">
+            <h2>  PRODUCTS </h2> 
+        </div>
+
+        <DIV class="gallery">
+            <div class="border1">  </div>
+
+            <div class="border2">
+                <div class="card">
+                    <img src="MEDIA/s25ultra.png" style="width: 100%;">
+                    <H2> SAMSUNG S25 ULTRA </H2>
+                    <br>
+                    <H3 style="display: inline;"> Prize: </H3>
+                    <P style="display: inline; color: rgb(251, 220, 46);"> $1200 </P> <br>
+                    <H3 style="display: inline;"> Memory: </H3>
+                    <P style="display: inline;"> 12GB/512GB </P>
+                    <BR>
+                    <H3 style="display: inline;"> Camera: </H3>
+                    <P style="display: inline;"> 200MP: </P>
+                    <BR>
+                    <H3 style="display: inline;"> Display: </H3>
+                    <P style="display: inline;"> 6.9 Inch </P>
+                    <BR>
+                    <H3 style="display: inline;"> Battery: </H3>
+                    <P style="display: inline;"> 5000mah </P>
+                    
+                    <DIV class="DETAIL"> <A href="SAMSUNG.html" target="_blank"> VIEW DETAILS </A> </DIV>
+                </div>
+            </div>
+
+            <div class="border3">
+                <div class="card">
+                    <img src="MEDIA/vivox200pro.png" style="width: 93%; margin-left: 15px;">
+                    <H2> VIVO X200 PRO </H2>
+                    <br>
+                    <H3 style="display: inline;"> Prize: </H3>
+                    <P style="display: inline; color: rgb(251, 220, 46);"> $999 </P> <br>
+                    <H3 style="display: inline;"> Memory: </H3>
+                    <P style="display: inline;"> 16GB/512GB </P>
+                    <BR>
+                    <H3 style="display: inline;"> Camera: </H3>
+                    <P style="display: inline;"> 200MP </P>
+                    <BR>
+                    <H3 style="display: inline;"> Display: </H3>
+                    <P style="display: inline;"> 6.8 Inch </P>
+                    <BR>
+                    <H3 style="display: inline;"> Battery: </H3>
+                    <P style="display: inline;"> 6000mah </P>
+                    <br>
+                    <DIV class="DETAIL"> <A href="VIVO.html" target="_blank"> VIEW DETAILS </A> </DIV>
+                </div>
+            </div>
+
+            <div class="border4">
+                <div class="card">
+                    <img src="MEDIA/xiaomi15ultra.png" style="width: 91%; margin-left: 15px;">
+                    <H2> XIAOMI 15 ULTRA </H2>
+                    <br>
+                    <H3 style="display: inline;"> Prize: </H3>
+                    <P style="display: inline; color: rgb(251, 220, 46);"> $1050 </P><br>
+                    <H3 style="display: inline;"> Memory: </H3>
+                    <P style="display: inline;"> 16GB/512GB </P>
+                    <BR>
+                    <H3 style="display: inline;"> Camera: </H3>
+                    <P style="display: inline;"> 50MP </P>
+                    <BR>
+                    <H3 style="display: inline;"> Display: </H3>
+                    <P style="display: inline;"> 6.7 Inch </P>
+                    <BR>
+                    <H3 style="display: inline;"> Battery: </H3>
+                    <P style="display: inline;"> 5410mah </P>
+                    <br>
+                    <DIV class="DETAIL"> <A href="xiaomi.html" target="_blank"> VIEW DETAILS </A> </DIV>
+                </div>
+            </div>
+
+            <div class="border5">  </div>
+        </DIV>
+
+        <FOOTER>
+
+            <DIV class="footer">
+                <DIV>
+                    <H2> LET US HELP YOU </H2>
+                    <P> YOUR ACCOUNT </P>
+                    <P> YOUR ORDER </P>
+                    <P> YOUR RETURNS </P>
+                    <P> E-WARRENTY </P>
+                </DIV>
+                <DIV>
+                    <H2> TECH POINT </H2>
+                    <P> ABOUT US </P>
+                    <P> CAREERS</P>
+                    <P> CONTACT US </P>
+                    <P> COPYRIGHT </P>
+                </DIV>
+                <DIV>
+                    <H2> CUSTOMER SERVICES </H2>
+                    <P> HELP CENTER </P>
+                    <P> PRIVACY POLICY </P>
+                    <P> INSTALLMENTS </P>
+                    <P> E-WARRENTY </P>
+                </DIV>
+            </DIV>
+
+            <DIV class="foot">
+                <P>© CREATED BY Muhammad Omer. WEB-DEVELOPMENT BATCH 2025 </P>
+            </DIV>
+            
+        </FOOTER>
+    </body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BUY NOW</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+                background-color: black;
+                color: WHITE;
+                
+            }
+
+            body p{
+                 font-weight: bold;
+                 color: rgb(197, 197, 197);
+            }
+
+            body h2 {
+                font-weight: bold;
+                color: white;
+            }
+
+            body h3 {
+                font-weight: bold;
+                color: white;
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 6%;
+                background-color: black;
+                border-bottom: 2px solid #2d92ff;
+                height: 120px;
+                border-bottom-left-radius: 50px;
+                border-bottom-right-radius: 50px;
+            }
+
+            header h1 {
+                color: #22aeff;
+                font-size: 45px;
+                word-spacing: 10px;
+            }
+
+            .navbar {
+                display: flex;
+                align-items: center;
+                padding: 10px 8%;
+                background-color: black;
+                text-align: right;
+                gap: 40px;
+                font-weight: bold;
+            }
+
+            header a{
+                text-decoration: none;
+                color: white;
+                font-size: 22px;
+
+            }
+
+            a:hover {
+                transform: scale(1.05);
+                transition: 0.3s;
+                color: #01afff;
+                
+            }
+
+            header h1:hover {
+                color: #0184ff;
+            }
+
+            footer {
+                background-color: rgb(0, 0, 0);
+                margin-top: 80px;
+                padding: 30px;
+                text-align: center;
+                border-top: 2px solid #2d92ff;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px;
+            }
+
+            .footer {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                margin: auto;
+                text-align: center;
+                gap: 20%;
+                line-height: 40px;
+                padding: 10px;
+                
+            }
+
+            .hero {
+                width: 100%;
+               
+            }
+
+            .hero1 {
+                font-size: 90px;
+                text-align: center;
+                padding-top: 60px;
+                background: linear-gradient(-39deg, #9ffac7 , #64e9e3 , #0e60f9 70%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .hero2 {
+                font-size: 33px;
+                text-align: center;
+                margin-bottom: 60px;
+                align-items: start;
+                color: rgb(197, 197, 197);
+                
+            }
+
+            .container {
+                width: 40%;
+                border: 2px solid #0184ff;
+                border-radius: 30px;
+                margin: auto;
+                transition: 0.3s ease-in-out;
+                padding: 30px;
+            }
+
+            .container:hover {
+                border: 2PX solid #1970fc;
+                border-radius: 40PX;
+                transform: translateY(-17px) scale(1.03) rotateX(6deg) rotateY(-4deg);
+                background-color: #33b7fe2c;
+                box-shadow: 0 12px 18px rgba(0, 0, 0, 0.75), 0 6px 14px rgb(39, 214, 253);
+            }
+
+            label {
+                font-size: 20px;
+                font-weight: bold;
+                color: rgb(39, 214, 253);
+                display: block;
+                text-align: center;
+            }
+
+            .a input, select {
+                width: 80%;
+                height: 40px;
+                background-color: rgba(161, 161, 161, 0.454);
+                border-radius: 20px;
+            }
+
+            .a{
+                width: 80%;
+                margin: auto;
+            }
+
+            .button input{
+                width: 100%;
+                height: 60px;
+                border-radius: 30px;
+                background: linear-gradient(-39deg, #51f196 , #64e9e3 , #0e60f9 70%);
+            }
+
+            .button{
+                transition: 0.3s ease-in-out;
+            }
+
+            .button:hover{
+                transform: translateY(-17px) scale(1.03) rotateX(6deg) rotateY(-4deg);
+            }
+
+            .dropdown{
+                margin-left: 40px;
+                width: 30px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="home.html" target="_blank"> <H1> TECH POINT </H1> </a>
+            <div class="navbar">
+                <a href="SAMSUNG.html" target="_blank"> SAMSUNG </a>
+                <a href="VIVO.html" target="_blank"> VIVO </a>
+                <a href="xiaomi.html" target="_blank"> XIAOMI </a>
+                <a href="BUYNOW.html" target="_blank" class="nav"><i class="fa-solid fa-cart-shopping"></i> BUY NOW </a>
+            </div>
+        </header>
+
+        <div class="hero">
+            <h1 class="hero1"> Buy Your Smartphone Now </h1>
+            <H1 class="hero2"> Please fill the form To Buy A Phone </H1>
+        </div>
+            
+        <DIV class="container">
+            <form>
+                <div class="a">
+                    <label> Select Mobile </label> 
+                    <div class="dropdown">
+                        <select name="MOBILE"style="margin-left="10px">
+                            <option value=""> Select Mobile </option>
+                            <option value="PAKISTAN"> SAMSUNG S25 ULTRA </option>
+                            <option value="INDIA"> VIVO X200 PRO</option>
+                            <option value="USA"> XIAOMI 15 ULTRA </option>
+                        </select>
+                    </div>
+                              
+                    <br> <br>
+
+                    <label> Your Name </lable> 
+                    <input type="text" name="name">
+                    <br> <br>
+                
+                    <label> Your Email </label> 
+                    <input type="email" name="email">
+                    <br> <br>
+                
+                    <label> Enter Password </lable> 
+                    <input type="password" name="password">
+                    <br> <br>
+                
+                    <label> Your Location </lable> 
+                        <select name="MOBILE">
+                            <option value=""> SELECT LOCATION </option>
+                            <option value="PAKISTAN"> LAHORE </option>
+                            <option value="INDIA"> KARACHI </option>
+                            <option value="USA"> ISLAMABAD </option>
+                        </select>
+                    </div>
+                    <br> <br> <br>
+                <div class="button">
+                    <input type="SUBMIT" value="ORDER">
+                </div>
+            </form>
+        </DIV>
+
+        <FOOTER>
+
+            <DIV class="footer">
+                <DIV>
+                    <H2> LET US HELP YOU </H2>
+                    <P> YOUR ACCOUNT </P>
+                    <P> YOUR ORDER </P>
+                    <P> YOUR RETURNS </P>
+                    <P> E-WARRENTY </P>
+                </DIV>
+                <DIV>
+                    <H2> TECH POINT </H2>
+                    <P> ABOUT US </P>
+                    <P> CAREERS</P>
+                    <P> CONTACT US </P>
+                    <P> COPYRIGHT </P>
+                </DIV>
+                <DIV>
+                    <H2> CUSTOMER SERVICES </H2>
+                    <P> HELP CENTER </P>
+                    <P> PRIVACY POLICY </P>
+                    <P> INSTALLMENTS </P>
+                    <P> E-WARRENTY </P>
+                </DIV>
+            </DIV>
+            <DIV class="foot">
+                <P>© CREATED BY Muhammad Omer. WEB-DEVELOPMENT BATCH 2025 </P>
+            </DIV>
+        </FOOTER>
+    </body>
+</html>
+
+
+
+
