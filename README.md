@@ -1,4 +1,3 @@
-A modern, responsive mobile website built with HTML, CSS, and JavaScript, featuring a clean UI, smooth animations, and an optimized mobile-first user experience.
 
 
 
